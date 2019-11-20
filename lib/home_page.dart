@@ -43,10 +43,11 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 //update the state of the app
                 Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Settings()),
-                );
+                Navigator.pushNamed(context, '/settings');
+//                Navigator.push(
+//                  context,
+//                  MaterialPageRoute(builder: (context) => Settings()),
+//                );
               },
             ),
             ListTile(

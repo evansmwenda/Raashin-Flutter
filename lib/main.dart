@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'screens/settings_page.dart';
 import 'dart:async';
 
 ///coded by 0utlaw
@@ -8,7 +9,14 @@ import 'dart:async';
 
 void main() {
   runApp(MaterialApp(
-    home: MyApp(),
+    // Start the app with the "/" named route. In this case, the app starts
+    // on the Splash Screen widget.
+    initialRoute: '/',
+    routes: {
+      '/': (context) => MyApp(), //splash screen page
+      '/home': (context) => HomePage(), //home page
+      '/settings': (context) => Settings(), //settings page
+    },
   ));
 }
 
@@ -21,11 +29,12 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomePage(),
-          ));
+      Navigator.pushNamed(context, '/home');
+//      Navigator.push(
+//          context,
+//          MaterialPageRoute(
+//            builder: (context) => HomePage(),
+//          ));
     });
   }
 

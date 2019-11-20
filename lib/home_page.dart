@@ -43,7 +43,19 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 //update the state of the app
                 Navigator.pop(context);
-                Navigator.pushNamed(context, '/settings');
+
+                Navigator.pushNamed(
+                  context,
+                  Settings.routeName,
+                  arguments: ScreenArguments(
+                    '0utlaw Arguments Screen',
+                    'This message is extracted in the build method.',
+                  ),
+                );
+
+//                Navigator.pushNamed(context, '/settings');
+
+
 //                Navigator.push(
 //                  context,
 //                  MaterialPageRoute(builder: (context) => Settings()),
@@ -81,4 +93,14 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+// You can pass any object to the arguments parameter.
+// In this example, create a class that contains a customizable
+// title and message.
+class ScreenArguments {
+  final String title;
+  final String message;
+
+  ScreenArguments(this.title, this.message);
 }

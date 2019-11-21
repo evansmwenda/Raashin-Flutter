@@ -4,19 +4,19 @@ class FavoriteTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Column(
-          // center the children
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              Icons.favorite,
-              size: 160.0,
-              color: Colors.red,
+      child: GridView.count(
+        // Create a grid with 2 columns. If you change the scrollDirection to
+        // horizontal, this produces 2 rows.
+        crossAxisCount: 2,
+        // Generate 100 widgets that display their index in the List.
+        children: List.generate(100, (index) {
+          return Center(
+            child: Text(
+              'Item $index',
+              style: Theme.of(context).textTheme.headline,
             ),
-            Text("Favorite Tab")
-          ],
-        ),
+          );
+        }),
       ),
     );
   }

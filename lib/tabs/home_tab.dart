@@ -39,25 +39,69 @@ class HomeTab extends StatelessWidget {
       ).toList(),
     );
 
-    return Container(
-      child: Column(
-        // center the children
-//        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 5.0),
-            child: touchDetectionDemo,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 5.0),
-            child: Column(
-              children: [
-                Text("Products"),
-              ],
-            ),
-          )
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        Container(
+          child: touchDetectionDemo,
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber[500],
+          child: const Center(child: Text('Entry B')),
+        ),
+        Container(
+
+            child: Expanded(
+                child: GridView.count(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  // Create a grid with 2 columns. If you change the scrollDirection to
+                  // horizontal, this produces 2 rows.
+                  crossAxisCount: 2,
+                  // Generate 100 widgets that display their index in the List.
+                  children: List.generate(100, (index) {
+                    return Center(
+                      child: Text(
+                        'Item $index',
+                        style: Theme.of(context).textTheme.headline,
+                      ),
+                    );
+                  }),
+                )
+
+        )
+
+
+
+
+        ),
+      ],
+
+
+
+
+
+
+//      child: Column(
+//        // center the children
+////        mainAxisAlignment: MainAxisAlignment.start,
+//        children: <Widget>[
+//          Padding(
+//            padding: EdgeInsets.symmetric(vertical: 5.0),
+//            child: touchDetectionDemo,
+//          ),
+//          Padding(
+//            padding: EdgeInsets.symmetric(vertical: 5.0),
+//            child: Column(
+//              children: [
+//                Text("Products"),
+//              ],
+//            ),
+//          ),
+//
+//        ],
+//      ),
+
     );
   }
 }

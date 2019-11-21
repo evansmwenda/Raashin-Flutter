@@ -14,7 +14,7 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) => MyApp(), //splash screen page
-      '/home': (context) => HomePage(), //home page
+      HomePage.routeName: (context) => HomePage(), //home page
       Settings.routeName: (context) => Settings(),
     },
   ));
@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamed(context, HomePage.routeName);
 //      Navigator.push(
 //          context,
 //          MaterialPageRoute(

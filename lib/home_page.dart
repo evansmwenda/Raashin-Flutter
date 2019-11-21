@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/settings_page.dart';
 
 class HomePage extends StatelessWidget {
+  static const routeName = '/home';
   @override
   Widget build(BuildContext context) {
     var aboutChild = AboutListTile(
@@ -43,7 +44,16 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 //update the state of the app
                 Navigator.pop(context);
-                Navigator.pushNamed(context, '/settings');
+//                Navigator.pushNamed(context, '/settings');
+
+                Navigator.pushNamed(
+                  context,
+                  Settings.routeName,
+                  arguments: ScreenArguments(
+                    "passed arguments",
+                    "arguments passed in navigator function",
+                  ),
+                );
 //                Navigator.push(
 //                  context,
 //                  MaterialPageRoute(builder: (context) => Settings()),
@@ -81,4 +91,11 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+class ScreenArguments{
+  final String title;
+  final String message;
+
+  ScreenArguments(this.title,this.message);
 }

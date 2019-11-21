@@ -1,21 +1,85 @@
 import 'package:flutter/material.dart';
 import 'screens/settings_page.dart';
+import 'tabs/home_tab.dart';
+import 'tabs/favorite_tab.dart';
+import 'tabs/cart_tab.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   static const routeName = '/home';
+  @override
+  _HomePageState createState() => _HomePageState();
+
+}
+
+class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixin {
+
+
+  //set up a tab controller
+  TabController controller;
+
+  @override
+  void initState(){
+    super.initState();
+    // Initialize the Tab Controller
+    controller = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose(){
+    //dispose of the tab controller
+    controller.dispose();
+    super.dispose();
+  }
+
+
+  TabBar getTabBar() {
+    return TabBar(
+      tabs: <Tab>[
+        Tab(
+          // set icon to the tab
+          icon: Icon(Icons.home),
+        ),
+        Tab(
+          icon: Icon(Icons.favorite),
+        ),
+        Tab(
+          icon: Icon(Icons.shopping_cart),
+        ),
+      ],
+      // setup the controller
+      controller: controller,
+    );
+  }
+
+  TabBarView getTabBarView(var tabs) {
+    return TabBarView(
+      // Add tabs as widgets
+      children: tabs,
+      // set the controller
+      controller: controller,
+    );
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     var aboutChild = AboutListTile(
         child: Text("About"),
-        applicationName: "Application Name",
+        applicationName: "Raashin",
         applicationVersion: "v1.0.0",
-        applicationIcon: Icon(Icons.adb),
         icon: Icon(Icons.info));
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Raashin"),
+          // Set the background color of the App Bar
+          backgroundColor: Colors.blue,
+          // Set the bottom property of the Appbar to include a Tab Bar
+          bottom: getTabBar(),
       ),
-      body: Center(child: Text('My Home Page!')),
+        body: getTabBarView(<Widget>[HomeTab(), FavoriteTab(), CartTab()]),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical

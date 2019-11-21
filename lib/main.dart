@@ -15,8 +15,7 @@ void main() {
     routes: {
       '/': (context) => MyApp(), //splash screen page
       '/home': (context) => HomePage(), //home page
-//      '/settings': (context) => Settings(), //settings page
-      Settings.routeName: (context) => Settings(), //settings page
+      Settings.routeName: (context) => Settings(),
     },
   ));
 }

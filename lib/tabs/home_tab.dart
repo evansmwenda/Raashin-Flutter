@@ -39,48 +39,189 @@ class HomeTab extends StatelessWidget {
       ).toList(),
     );
 
-    return Column(
+    return ListView(
       children: <Widget>[
         Container(
           child: touchDetectionDemo,
         ),
         Container(
           height: 50,
-          color: Colors.amber[500],
+          color: Colors.blue[500],
+          child: const Center(child: Text('Entry A')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red[500],
           child: const Center(child: Text('Entry B')),
         ),
         Container(
-
-            child: Expanded(
-                child: GridView.count(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  // Create a grid with 2 columns. If you change the scrollDirection to
-                  // horizontal, this produces 2 rows.
-                  crossAxisCount: 2,
-                  // Generate 100 widgets that display their index in the List.
-                  children: List.generate(100, (index) {
-                    return Center(
-                      child: Text(
-                        'Item $index',
-                        style: Theme.of(context).textTheme.headline,
-                      ),
-                    );
-                  }),
-                )
-
-        )
-
-
-
-
+          height: 50,
+          color: Colors.orange[500],
+          child: const Center(child: Text('Entry C')),
         ),
+        Container(
+          height: 50,
+          color: Colors.blue[500],
+          child: const Center(child: Text('Entry D')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.grey[500],
+          child: const Center(child: Text('Entry E')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.green[500],
+          child: const Center(child: Text('Entry F')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.black26,
+          child: const Center(child: Text('Entry G')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.indigo[500],
+          child: const Center(child: Text('Entry H')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.lightBlue[500],
+          child: const Center(child: Text('Entry I')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.yellow[500],
+          child: const Center(child: Text('Entry J')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.blueGrey[500],
+          child: const Center(child: Text('Entry K')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.yellow[500],
+          child: const Center(child: Text('Entry L')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.grey[500],
+          child: const Center(child: Text('Entry M')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.orange[500],
+          child: const Center(child: Text('Entry N')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red[500],
+          child: const Center(child: Text('Entry O')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.blue[500],
+          child: const Center(child: Text('Entry A')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red[500],
+          child: const Center(child: Text('Entry B')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.orange[500],
+          child: const Center(child: Text('Entry C')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.blue[500],
+          child: const Center(child: Text('Entry D')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.grey[500],
+          child: const Center(child: Text('Entry E')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.green[500],
+          child: const Center(child: Text('Entry F')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.black26,
+          child: const Center(child: Text('Entry G')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.indigo[500],
+          child: const Center(child: Text('Entry H')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.lightBlue[500],
+          child: const Center(child: Text('Entry I')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.yellow[500],
+          child: const Center(child: Text('Entry J')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.blueGrey[500],
+          child: const Center(child: Text('Entry K')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.yellow[500],
+          child: const Center(child: Text('Entry L')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.grey[500],
+          child: const Center(child: Text('Entry M')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.orange[500],
+          child: const Center(child: Text('Entry N')),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red[500],
+          child: const Center(child: Text('Entry O')),
+        ),
+
+//        Container(
+//
+//            child: Expanded(
+//                child: GridView.count(
+//                  shrinkWrap: true,
+//                  scrollDirection: Axis.vertical,
+//                  // Create a grid with 2 columns. If you change the scrollDirection to
+//                  // horizontal, this produces 2 rows.
+//                  crossAxisCount: 2,
+//                  // Generate 100 widgets that display their index in the List.
+//                  children: List.generate(100, (index) {
+//                    return Center(
+//                      child: Text(
+//                        'Item $index',
+//                        style: Theme.of(context).textTheme.headline,
+//                      ),
+//                    );
+//                  }),
+//                )
+//
+//        )
+//
+//
+//
+//
+//        ),
       ],
-
-
-
-
-
 
 //      child: Column(
 //        // center the children
@@ -101,7 +242,6 @@ class HomeTab extends StatelessWidget {
 //
 //        ],
 //      ),
-
     );
   }
 }

@@ -9,6 +9,7 @@ import 'dart:async';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     // Start the app with the "/" named route. In this case, the app starts
     // on the Splash Screen widget.
     initialRoute: '/',

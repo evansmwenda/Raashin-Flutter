@@ -1,6 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_raashin/models/countries_model.dart';
+import 'package:flutter_raashin/models/products_model.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:http/http.dart' as http;
+
+import 'ProductsGridView.dart';
+import 'network_layer.dart';
 
 final List<String> imgList = [
   'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
@@ -13,7 +21,19 @@ final List<String> imgList = [
 
 final Widget placeholder = Container(color: Colors.grey);
 
-class HomeTab extends StatelessWidget {
+class HomeTab extends StatefulWidget {
+
+  @override
+  HomeTabState createState() => HomeTabState();
+}
+
+class HomeTabState extends State<HomeTab> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     //User input pauses carousels automatic playback
@@ -47,303 +67,17 @@ class HomeTab extends StatelessWidget {
         ),
         Container(
           //child: Expanded(
-          child: GridView.count(
-              shrinkWrap: true,
-              physics: ScrollPhysics(),//to disable gridviews' scrolling
-              // Create a grid with 2 columns. If you change the scrollDirection to
-              // horizontal, this produces 2 rows.
-              crossAxisCount: 2,
-              // Generate 100 widgets that display their index in the List.
-              children: <Widget>[
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child:Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  child: Stack(
-                    children: <Widget>[
-                      Center(child: CircularProgressIndicator()),
-                      Center(
-                        child: FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: 'https://picsum.photos/250?image=9',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.green[500],
-                  child: const Center(child: Text('Entry N')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.red[500],
-                  child: const Center(child: Text('Entry O')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.indigo[500],
-                  child: const Center(child: Text('Entry B')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.orange[500],
-                  child: const Center(child: Text('Entry C')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.blue[500],
-                  child: const Center(child: Text('Entry D')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.grey[500],
-                  child: const Center(child: Text('Entry E')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.green[500],
-                  child: const Center(child: Text('Entry F')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.black26,
-                  child: const Center(child: Text('Entry G')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.indigo[500],
-                  child: const Center(child: Text('Entry H')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.lightBlue[500],
-                  child: const Center(child: Text('Entry I')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.yellow[500],
-                  child: const Center(child: Text('Entry J')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.blueGrey[500],
-                  child: const Center(child: Text('Entry K')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.yellow[500],
-                  child: const Center(child: Text('Entry L')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.grey[500],
-                  child: const Center(child: Text('Entry M')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.orange[500],
-                  child: const Center(child: Text('Entry N')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.red[500],
-                  child: const Center(child: Text('Entry O')),
-                ),
-              ]
-//
-//
-//
-//                  List.generate(100, (index) {
-//                    return Center(
-//                      child: Text(
-//                        'Item $index',
-//                        style: Theme.of(context).textTheme.headline,
-//                      ),
-//                    );
-//                  }),
-              ),
-          // ),
-        ),
-//
-//
-//
-//
-//        ),
-      ],
+          child: FutureBuilder<List<Country>>(
+              future: fetchCountry(http.Client()),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) print(snapshot.error);
 
-//      child: Column(
-//        // center the children
-////        mainAxisAlignment: MainAxisAlignment.start,
-//        children: <Widget>[
-//          Padding(
-//            padding: EdgeInsets.symmetric(vertical: 5.0),
-//            child: touchDetectionDemo,
-//          ),
-//          Padding(
-//            padding: EdgeInsets.symmetric(vertical: 5.0),
-//            child: Column(
-//              children: [
-//                Text("Products"),
-//              ],
-//            ),
-//          ),
-//
-//        ],
-//      ),
+                return snapshot.hasData
+                    ? ProductsGridView(productsList: snapshot.data)
+                    : Center(child: new CircularProgressIndicator());
+              }),
+        ),
+      ],
     );
   }
 }

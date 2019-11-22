@@ -24,7 +24,8 @@ dependencies:
   carousel_slider: ^1.3.0
   #for the network image placeholder
   transparent_image: ^1.0.0
-
+  #for http calls
+  http: ^0.12.0+2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -45,9 +46,12 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-#  assets:
-#    - assets/loading_spinner2.gif
-#    - assets/loading_spinner.gif
+  assets:
+    - assets/facebook.png
+    - assets/google_plus.png
+    - assets/instagram.png
+    - assets/linked_in.png
+    - assets/twitter.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

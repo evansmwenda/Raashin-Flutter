@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 final List<String> imgList = [
   'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
@@ -56,72 +57,175 @@ class HomeTab extends StatelessWidget {
               children: <Widget>[
                 Container(
                   height: 50,
-                  color: Colors.blue[500],
-                  child: const Center(child: Text('Entry A')),
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 50,
-                  color: Colors.indigo[500],
-                  child: const Center(child: Text('Entry B')),
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 50,
-                  color: Colors.orange[500],
-                  child: const Center(child: Text('Entry C')),
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 50,
-                  color: Colors.blue[500],
-                  child: const Center(child: Text('Entry D')),
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 50,
-                  color: Colors.grey[500],
-                  child: const Center(child: Text('Entry E')),
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child:Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  child: Stack(
+                    children: <Widget>[
+                      Center(child: CircularProgressIndicator()),
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: 'https://picsum.photos/250?image=9',
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 50,
                   color: Colors.green[500],
-                  child: const Center(child: Text('Entry F')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.black26,
-                  child: const Center(child: Text('Entry G')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.indigo[500],
-                  child: const Center(child: Text('Entry H')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.lightBlue[500],
-                  child: const Center(child: Text('Entry I')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.yellow[500],
-                  child: const Center(child: Text('Entry J')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.blueGrey[500],
-                  child: const Center(child: Text('Entry K')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.green[500],
-                  child: const Center(child: Text('Entry L')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.grey[500],
-                  child: const Center(child: Text('Entry M')),
-                ),
-                Container(
-                  height: 50,
-                  color: Colors.orange[500],
                   child: const Center(child: Text('Entry N')),
                 ),
                 Container(
